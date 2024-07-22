@@ -2,6 +2,6 @@
 title: Pricing
 tags: main
 layout: base.njk
-permalink: pricing.html
+permalink: pricing/index.html
 ---
 ödsäflds öfldsöäf

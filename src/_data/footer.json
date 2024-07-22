@@ -5,24 +5,6 @@
     "city": "Irvine",
     "zip": "CA 92618"
   },
-  "legal": [
-    {
-      "title": "Support",
-      "url": "#"
-    },
-    {
-      "title": "Contact Us",
-      "url": "#"
-    },
-    {
-      "title": "Privacy",
-      "url": "#"
-    },
-    {
-      "title": "Terms of Service",
-      "url": "#"
-    }
-  ],
   "external": [
     {
       "title": "Home Assistant",

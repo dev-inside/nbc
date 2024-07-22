@@ -1,7 +1,7 @@
 ---
-title: Privacy
+title: Support
 tags: [main, legal]
 layout: base.njk
-permalink: privacy/index.html
+permalink: support/index.html
 ---
 ödsäflds öfldsöäf

@@ -8,7 +8,7 @@
 </head>
 
 {%- for post in collections.main -%}
-  <li>{{ post.data.title }}</li>
+  <li><a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a></li>
 {%- endfor -%}
 
 <body>

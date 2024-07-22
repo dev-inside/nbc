@@ -11,9 +11,9 @@
 
     {# Legal links #}
     <ul>
-        {% for legal in footer.legal %}
+        {% for legal in collections.legal %}
         <li>
-            <a href="{{ legal.url }}" title="{{ legal.title }}">{{ legal.title }}</a>
+            <a href="{{ legal.url }}" title="{{ legal.data.title }}">{{ legal.data.title }}</a>
         </li>
         {% endfor %}
     </ul>
