@@ -1,7 +1,7 @@
 ---
 title: Pricing
 tags: main
-layout: base.njk
+layout: singlepage.njk
 permalink: pricing/index.html
 ---
 ödsäflds öfldsöäf

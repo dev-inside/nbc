@@ -1,7 +1,7 @@
 ---
 title: Configuration
 tags: main
-layout: base.njk
+layout: singlepage.njk
 permalink: configuration/index.html
 ---
 ödsäflds öfldsöäf

@@ -1,0 +1,13 @@
+---
+title: Start
+---
+
+{% extends "base.njk" %}
+
+{% block content %}
+{% for item in collections.home %}
+    <section class="">
+        {{ item.data.content | safe }}
+    </section>
+{% endfor %}
+{% endblock content %}

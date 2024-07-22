@@ -1,7 +1,7 @@
 ---
 title: About us
 tags: main
-layout: base.njk
+layout: singlepage.njk
 permalink: about/index.html
 ---
 ödsäflds öfldsöäf

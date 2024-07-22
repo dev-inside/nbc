@@ -1,7 +1,7 @@
 ---
 title: Jobs
 tags: main
-layout: base.njk
+layout: singlepage.njk
 permalink: jobs/index.html
 ---
 ödsäflds öfldsöäf

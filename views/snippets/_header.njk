@@ -1,0 +1,14 @@
+<figure>
+    <a href="/" title="Nabu Casa">
+        <img src="/" alt="Nabu Casa">
+    </a>
+</figure>
+<nav>
+    <ul>
+    {%- for post in collections.main %}
+        <li>
+            <a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+        </li>
+    {% endfor -%}
+    </ul>
+</nav>

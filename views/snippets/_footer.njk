@@ -10,20 +10,24 @@
     </div>
 
     {# Legal links #}
-    <ul>
-        {% for legal in collections.legal %}
-        <li>
-            <a href="{{ legal.url }}" title="{{ legal.data.title }}">{{ legal.data.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+    <nav>
+        <ul>
+        {%- for legal in collections.legal %}
+            <li>
+                <a href="{{ legal.url }}" title="{{ legal.data.title }}">{{ legal.data.title }}</a>
+            </li>
+        {% endfor -%}
+        </ul>
+    </nav>
 
     {# External/Social Links #}
-    <ul>
-        {% for ext in footer.external %}
-        <li>
-            <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}">{{ ext.img }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+    <nav>
+        <ul>
+        {%- for ext in footer.external %}
+            <li>
+                <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}">{{ ext.img }}</a>
+            </li>
+        {% endfor -%}
+        </ul>
+    </nav>
 </footer>

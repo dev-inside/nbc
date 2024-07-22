@@ -1,0 +1,6 @@
+{% extends "base.njk" %}
+{% block content %}
+    {% for item in collections.single %}
+    <h2>{{ item.data.title }}</h2>
+{% endfor %}
+{% endblock content %}
