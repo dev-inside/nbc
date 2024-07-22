@@ -1,0 +1,40 @@
+{
+    "name": "Nabu Casa",
+    "cta": {
+        "trial": {
+            "title": "Start Trial",
+            "url": "#"
+        },
+        "login": {
+            "title": "Login",
+            "url": "#"
+        }
+    },
+    "links": {
+        "hassio": {
+            "title": "Home Assistant",
+            "img": "hassio.svg",
+            "url": "https://www.home-assistant.io/"
+        },
+        "github": {
+            "title": "Github",
+            "img": "github.svg",
+            "url": "https://github.com/nabucasa"
+        },
+        "facebook": {
+            "title": "Facebook",
+            "img": "facebook.svg",
+            "url": "https://www.facebook.com/NabuCasa"
+        },
+        "twitter": {
+            "title": "Twitter/X",
+            "img": "x.svg",
+            "url": "https://twitter.com/nabucasa"
+        },
+        "sdfds": {
+            "title": "Mastodon",
+            "img": "mastodon.svg",
+            "url": "https://fosstodon.org/@homeassistant"
+        }
+    }
+}
