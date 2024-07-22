@@ -1,16 +1,29 @@
 {
-  "name": "Nabu Casa",
-  "cta": [
+  "org": {
+    "name": "Nabu Casa, Inc.",
+    "street": "15 Hubble Suite 200",
+    "city": "Irvine",
+    "zip": "CA 92618"
+  },
+  "legal": [
     {
-      "title": "Start Trial",
+      "title": "Support",
       "url": "#"
     },
     {
-      "title": "Login",
+      "title": "Contact Us",
+      "url": "#"
+    },
+    {
+      "title": "Privacy",
+      "url": "#"
+    },
+    {
+      "title": "Terms of Service",
       "url": "#"
     }
   ],
-  "links": [
+  "external": [
     {
       "title": "Home Assistant",
       "img": "hassio.svg",
