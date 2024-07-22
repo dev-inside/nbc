@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 
+{%- for post in collections.main -%}
+  <li>{{ post.data.title }}</li>
+{%- endfor -%}
+
 <body>
     <h1>{{ title }}</h1>
     <main>
