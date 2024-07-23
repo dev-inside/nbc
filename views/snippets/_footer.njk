@@ -25,7 +25,7 @@
         <ul>
         {%- for ext in footer.external %}
             <li>
-                <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}">{{ ext.img }}</a>
+                <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}"><img src="img/external/{{ ext.img }}" alt="{{ ext.title }}"></a>
             </li>
         {% endfor -%}
         </ul>

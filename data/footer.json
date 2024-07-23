@@ -8,7 +8,7 @@
   "external": [
     {
       "title": "Home Assistant",
-      "img": "hassio.svg",
+      "img": "home-assistant.svg",
       "url": "https://www.home-assistant.io/"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "title": "Twitter/X",
-      "img": "x.svg",
+      "img": "x-twitter.svg",
       "url": "https://twitter.com/nabucasa"
     },
     {

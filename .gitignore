@@ -130,6 +130,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-img/*-300.jpeg
-img/*-300.webp
