@@ -1,0 +1,6 @@
+{
+    "override:tags": "",
+    "tags": "legal",
+    "layout": "singlepage.njk",
+    "permalink": "{{ title | slugify }}/"
+}

@@ -3,6 +3,7 @@
   "module": "index.js",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^4.0.2",
     "@types/bun": "latest"
   },
   "peerDependencies": {

@@ -1,3 +1,15 @@
-{% macro button(title,cta,btn='') %}
+{% macro btn(title,cta,btn='') %}
     <a href="{{cta}}" title="{{title}}" class="btn {{btn}}">{{title}}</a>
+{% endmacro %}
+
+{% macro pic(src, title) %}
+    
+{% endmacro %}
+
+{% macro section(selector) %}
+    {% for item in selector %}
+        <section class="">
+            {{ item.content | safe }}
+        </section>
+    {% endfor %}
 {% endmacro %}
