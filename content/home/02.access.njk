@@ -1,19 +1,11 @@
 ---
 title: Secure access from anywhere
-list:
-    - img: "help_hassio_assist.svg"
-      content: With Home Assistant Cloud, you can control your Home with your voice using Assist, our own voice assistant.
-    - img: "watch.png"
-      content: Assist works on a series of devices such as Android, Wear OS, iPhone, Apple Watch, and others.
-    - img: "alexa_and_google_assistant.svg"
-      content: You can still connect to both Google Assistant and Amazon Alexa to use the Amazon Echo or Google Home.
 ---
-{% import "_macros.njk" as mc %}
 
-<h2>{{ title }}</h2>
+## {{ title }}
 
 <figure>
-    <img src="img/remote_access.svg" alt="{{ title }}">
+    {% img "remote_access.svg", title %}
 </figure>
 
 No longer worry if you left the garage door open. Quickly access your Home Assistant instance from your phone, your favorite coffeeshop or at work.

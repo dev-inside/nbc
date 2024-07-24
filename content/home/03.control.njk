@@ -1,0 +1,18 @@
+---
+title:  Your assistant under your control!
+keypoints:
+    - img: "img/help_hassio_assist.svg"
+      content: With Home Assistant Cloud, you can control your Home with your voice using Assist, our own voice assistant.
+    - img: "img/watch.png"
+      content: Assist works on a series of devices such as Android, Wear OS, iPhone, Apple Watch, and others.
+    - img: "img/alexa_and_google_assistant.svg"
+      content: You can still connect to both Google Assistant and Amazon Alexa to use the Amazon Echo or Google Home.
+---
+
+## {{ title }}
+{% for kp in keypoints %}
+  <article>
+    {% thumbs kp.img, title, 300, [150] %}
+    <p>{{ kp.content }}</p>    
+  </article>
+{% endfor %}
