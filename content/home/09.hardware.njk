@@ -1,0 +1,20 @@
+---
+title:  Home Assistant Hardware
+slider:
+    - img: "img/hardware_HA_green.jpg"
+      content: GREEN
+    - img: "img/hardware_HA_yellow.jpg"
+      content: YELLOW
+    - img: "img/hardware_HA_skyconnect.jpg"
+      content: SkyConnect
+---
+
+## {{ title }}
+The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.
+
+{% for hw in slider %}
+  <article>
+    <h4>{{ hw.content }}</h4>
+    {% thumbs hw.img, title, 300, [150] %}
+  </article>
+{% endfor %}

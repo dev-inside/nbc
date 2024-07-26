@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
 		let metadata = await Image(src, {
 			widths: thmbs,
 			formats: ["webp", "jpeg"],
-			outputDir: "_public/img"
+			outputDir: "_public/img/"
 		});
 
 		let imageAttributes = {
@@ -45,6 +45,20 @@ module.exports = function (eleventyConfig) {
 		return `<img src="img/${src}" title="${title}" alt="${title}" />`
 	})
 
+	/**
+	 * shortcode.btn
+	 * Renders an ahref with a button-class
+	 *
+	 * @param   {string}  href      href
+	 * @param   {string}  title     title
+	 * @param   {string}  btn       html-class for button
+	 *
+	 * @return  {string}            Simple link/button helper
+	 */
+	eleventyConfig.addShortcode("btn", function(href, title, btn="btn"){
+		return `<a href="${href}" alt="${title}" class="${btn}">${title}</a>`
+	})
+
 	// SASS-Plugin
 	eleventyConfig.addPlugin(eleventySass, {
 		compileOptions: {
@@ -54,7 +68,7 @@ module.exports = function (eleventyConfig) {
 		},
 		sass: {
 			style: "compressed",
-			sourceMap: false
+			sourceMap: false,
 		},
 		rev: false
 	});
@@ -63,7 +77,9 @@ module.exports = function (eleventyConfig) {
 	// Copy img-folder including content
 	eleventyConfig.addPassthroughCopy("img");
 
-	
+	eleventyConfig.addPassthroughCopy({"./node_modules/@fontsource-variable/figtree/files/*.woff2": "_assets/fonts"});
+
+
 	// Set directories
 	return {
 		dir: {

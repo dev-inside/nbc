@@ -1,0 +1,13 @@
+@use "../vars.scss" as vars;
+@use "sass:map";
+@use "sass:color";
+
+:root {
+    @each $cname,$color in vars.$colors {
+        --clr-#{$cname}: #{$color};
+    }
+
+    @each $headline,$size in map.get(vars.$sizes, headlines) {
+        --utl-#{$headline}: #{$size};
+    }
+}

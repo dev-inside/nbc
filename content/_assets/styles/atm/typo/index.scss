@@ -1,0 +1,102 @@
+@use "../vars.scss" as vars;
+@use "sass:map";
+
+/**
+ * Simple CSS-reset and fontscaling
+ */
+@mixin reset {
+    * {
+        padding: 0;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/**
+ * Include @font-face
+ */
+@mixin getFonts {
+    @font-face {
+        font-family: 'Figtree Variable';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 300 900;
+        src: url(../fonts/figtree-latin-wght-normal.woff2) format('woff2-variations');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+}
+
+/**
+ * Base styling
+ */
+@mixin base {
+    body {
+        font-family: "Figtree Variable", sans-serif;
+        color: var(--clr-dblue);
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+
+
+    b,
+    strong,
+    .strong {
+        font-weight: 700;
+        color: var(--clr-brand);
+    }
+
+    a {
+        color: var(--clr-brand);
+        text-decoration: none;
+    }
+
+    ::selection {
+        background-color: rgba(map.get(vars.$colors, brand), $alpha: .2);
+    }
+}
+
+/**
+ * Create headlines
+ */
+@mixin headlines {
+    %headline {
+        line-height: 1;
+    }
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            @extend %headline;
+            font-size: var(--utl-h#{$i});
+        }
+    }
+}
+
+@mixin helpers {
+    $align: left, right, center;
+
+    .text {
+        @each $dir in $align {
+            &-#{$dir} {
+                text-align: $dir;
+            }
+        }
+    }
+}
+
+
+@mixin init {
+    @include reset;
+    @include getFonts;
+    @include base;
+    @include headlines;
+    @include helpers;
+}
