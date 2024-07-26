@@ -1,0 +1,44 @@
+@use "../vars.scss" as vars;
+
+
+@mixin makeGrid {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: var(--utl-base);
+        grid-row-gap: var(--utl-base);
+
+        &--no-gap {
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+    }
+}
+
+@mixin makeCols($prefix: false) {
+    $col: "col-";
+
+    @if $prefix {
+        $col: #{$col}#{$prefix}-;
+    }
+
+    @for $c from 1 through 12 {
+        .#{$col}#{$c} {
+            grid-column: span #{$c};
+        }
+    }
+}
+
+@mixin respGrid {
+    @each $vp, $size in vars.$viewports {
+        @media (min-width: #{$size}px) {            
+            @include makeCols($vp);
+        }
+    }
+}
+
+@mixin init{
+    @include makeGrid;
+    @include makeCols;
+    @include respGrid;
+}

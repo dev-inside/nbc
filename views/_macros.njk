@@ -6,7 +6,7 @@
 
 {% macro section(selector) %}
     {% for item in selector %}
-        <section class="">
+        <section class="wrapper">
             {{ item.content | safe }}
         </section>
     {% endfor %}

@@ -1,1 +1,6 @@
 @use "atm";
+
+.wrapper{
+    margin: 0 auto;
+    max-width: var(--utl-wrapper);
+}

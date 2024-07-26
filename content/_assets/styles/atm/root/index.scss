@@ -7,7 +7,11 @@
         --clr-#{$cname}: #{$color};
     }
 
-    @each $headline,$size in map.get(vars.$sizes, headlines) {
+    @each $utl,$size in vars.$util {
+        --utl-#{$utl}: #{$size};
+    }
+
+    @each $headline,$size in vars.$headlines {
         --utl-#{$headline}: #{$size};
     }
 }

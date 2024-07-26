@@ -1,23 +1,23 @@
-
-$sizes: (
+$util: (
     base: 1rem,
     font: 1.8rem,
     wrapper: 1440px,
-    
-    viewports: (
-        sm: 480,
-        md: 780,
-        lg: 1024
-    ),
+);
 
-    headlines: (
-        h1: 5.6rem,
-        h2: 3.2rem,
-        h3: 2.8rem,
-        h4: 2.4rem,
-        h5: 2rem,
-        h6: 1.8rem,
-    )
+
+$viewports: (
+    sm: 480,
+    md: 780,
+    lg: 1024,
+);
+
+$headlines: (
+    h1: 5.6rem,
+    h2: 3.2rem,
+    h3: 2.8rem,
+    h4: 2.4rem,
+    h5: 2rem,
+    h6: 1.8rem,
 );
 
 $colors: (
@@ -31,4 +31,4 @@ $colors: (
     yellow: #f1e91d,
     truedark: #193849,
     white: #e1f7ff,
-)
+);

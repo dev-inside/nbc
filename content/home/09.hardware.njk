@@ -12,9 +12,11 @@ slider:
 ## {{ title }}
 The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.
 
+<div class="grid">
 {% for hw in slider %}
-  <article>
+  <article class="col-12 col-md-4">
     <h4>{{ hw.content }}</h4>
     {% thumbs hw.img, title, 300, [150] %}
   </article>
-{% endfor %}
+  {% endfor %}
+</div>
