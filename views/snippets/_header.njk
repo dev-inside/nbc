@@ -1,14 +1,18 @@
-<figure>
-    <a href="/" title="{{ site.name }}">
-        <img src="img/nabucasa_logo.svg" alt="{{ site.name }}">
-    </a>
-</figure>
-<nav>
-    <ul>
-    {%- for post in collections.content %}
-        <li>
-            <a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
-        </li>
-    {% endfor -%}
-    </ul>
-</nav>
+<header id="main-header">
+    <div class="wrapper grid grid--vertical-align-center">
+        <figure class="logo col-2">
+            <a href="/" title="{{ site.name }}">
+                <img src="img/nabucasa_logo.svg" alt="{{ site.name }}">
+            </a>
+        </figure>
+        <nav id="main-navigation" class="col-8 col-md-8 col-md-center">
+            <ul>
+                {%- for post in collections.content %}
+                <li>
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+                </li>
+                {% endfor -%}
+            </ul>
+        </nav>
+    </div>
+</header>

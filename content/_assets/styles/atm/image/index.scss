@@ -1,0 +1,10 @@
+figure,
+picture {
+    --img-size: 100%;
+
+    img {
+        max-width: var(--img-size);
+        width: 100%;
+        height: auto;
+    }
+}

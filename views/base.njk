@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="_assets/styles/style.css">
 </head>
 
-{% include "snippets/_header.njk" %}
-{% import "_macros.njk" as mc %}
 
 <body>
+    {% include "snippets/_header.njk" %}
     <main>
         {% block content %}{% endblock content %}
     </main>

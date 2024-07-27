@@ -1,0 +1,36 @@
+@use "../../mlc/nav" as nav;
+@use "../../utl/" as utl;
+@use "sass:color";
+
+#main-header{
+    position: sticky;
+    top: 0;
+    padding: utl.base(.4);
+    background-color: color.adjust(utl.grabColor(white), $alpha: -.1);
+
+    .logo{
+        padding: utl.base(.3) 0;
+        max-width: 10rem;
+    }
+}
+
+#main-navigation {
+    @extend %navigation;
+
+    ul{
+        li{
+
+            a{
+                color: var(--clr-darkblue);
+                padding: var(--utl-base);
+                border-radius: .6rem;
+                padding: utl.base(.6) utl.base(1.2);
+
+                &:hover{
+                    background-color: var(--clr-brand);
+                    color: var(--clr-white);
+                }
+            }
+        }
+    }
+}

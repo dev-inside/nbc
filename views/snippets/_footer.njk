@@ -1,33 +1,37 @@
-<footer>
-    {# rdfa snippets #}
-    <div vocab="https://schema.org/" typeof="Organization">
-        © <span property="name">{{ footer.org.name }}</span> -
-        <span property="address">
-            <span property="streetAddress">{{ footer.org.street }}</span>,
-            <span property="addressLocality">{{ footer.org.city }}</span>,
-            <span property="postalCode">{{ footer.org.zip }}</span>
-        </span>
+<footer id="main-footer">
+    <div class="wrapper grid grid--vertical-align-center">
+        <section class="col-12 col-md-8">
+            {# rdfa snippets #}
+            <div vocab="https://schema.org/" typeof="Organization">
+                © <span property="name">{{ footer.org.name }}</span> -
+                <span property="address">
+                    <span property="streetAddress">{{ footer.org.street }}</span>,
+                    <span property="addressLocality">{{ footer.org.city }}</span>,
+                    <span property="postalCode">{{ footer.org.zip }}</span>
+                </span>
+            </div>
+
+            {# Legal links #}
+            <nav>
+                <ul>
+                    {%- for legal in collections.legal %}
+                    <li>
+                        <a href="{{ legal.url }}" title="{{ legal.data.title }}">{{ legal.data.title }}</a>
+                    </li>
+                    {% endfor -%}
+                </ul>
+            </nav>
+        </section>
+        {# External/Social Links #}
+        <nav class="col-12 col-md-4 col-right">
+            <ul>
+                {%- for ext in footer.external %}
+                <li>
+                    <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}">{% img "external/" + ext.img,
+                        ext.title %}</a>
+                </li>
+                {% endfor -%}
+            </ul>
+        </nav>
     </div>
-
-    {# Legal links #}
-    <nav>
-        <ul>
-        {%- for legal in collections.legal %}
-            <li>
-                <a href="{{ legal.url }}" title="{{ legal.data.title }}">{{ legal.data.title }}</a>
-            </li>
-        {% endfor -%}
-        </ul>
-    </nav>
-
-    {# External/Social Links #}
-    <nav>
-        <ul>
-        {%- for ext in footer.external %}
-            <li>
-                <a href="{{ ext.url }}" target="_blank" title="{{ ext.title }}">{% img "external/" + ext.img, ext.title %}</a>
-            </li>
-        {% endfor -%}
-        </ul>
-    </nav>
 </footer>

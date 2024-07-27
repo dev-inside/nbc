@@ -1,13 +1,15 @@
 {% macro btn(title,cta,btn='') %}
-    <a href="{{cta}}" title="{{title}}" class="btn {{btn}}">{{title}}</a>
+<a href="{{cta}}" title="{{title}}" class="btn {{btn}}">{{title}}</a>
 {% endmacro %}
 
 
 
 {% macro section(selector) %}
-    {% for item in selector %}
-        <section class="wrapper">
+{% for item in selector %}
+    <section class="{{ item.data.section}}">
+        <div class="wrapper">
             {{ item.content | safe }}
-        </section>
-    {% endfor %}
+        </div>
+    </section>
+{% endfor %}
 {% endmacro %}

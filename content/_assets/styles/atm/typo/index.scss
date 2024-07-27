@@ -1,5 +1,6 @@
-@use "../vars.scss" as vars;
+@use "../../vars.scss" as vars;
 @use "sass:map";
+@use "../../utl/" as utl;
 
 /**
  * Simple CSS-reset and fontscaling
@@ -8,6 +9,7 @@
     * {
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
         font-weight: 300;
     }
 
@@ -37,12 +39,12 @@
     body {
         font-family: "Figtree Variable", sans-serif;
         color: var(--clr-dblue);
-        font-size: 1.8rem;
+        font-size: var(--utl-font);
         font-weight: 300;
     }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: var(--utl-base);
         line-height: 1.4;
     }
 
@@ -60,7 +62,7 @@
     }
 
     ::selection {
-        background-color: rgba(map.get(vars.$colors, brand), $alpha: .2);
+        background-color: rgba(utl.grabColor(brand), $alpha: .2);
     }
 }
 

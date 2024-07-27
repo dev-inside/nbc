@@ -1,0 +1,29 @@
+@use "../vars.scss" as vars;
+@use "sass:map";
+
+/**
+ * Little helper to grab colors from vars.$colors.
+ *
+ * @param   {string}  $input  color name according to vars.$colors
+ *
+ * @return  {string}          color value
+ */
+@function grabColor($input){
+    @return map.get(vars.$colors, $input);
+}
+
+/**
+ * Helper to calculate with base-size (1rem)
+ *
+ * @param   {int}   $mlp    muliplicator
+ *
+ * @return  {string}        returns var optionally with calc() function
+ */
+@function base($mlp: false){
+    @if $mlp{
+        @return  calc(var(--utl-base) * $mlp);
+    }
+    @else{
+        @return var(--utl-base);
+    }
+}

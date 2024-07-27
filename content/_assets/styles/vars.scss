@@ -1,9 +1,8 @@
 $util: (
     base: 1rem,
-    font: 1.8rem,
+    font: 1.7rem,
     wrapper: 1440px,
 );
-
 
 $viewports: (
     sm: 480,
@@ -20,9 +19,14 @@ $headlines: (
     h6: 1.8rem,
 );
 
+/**
+ * Creates colors as css-vars with clr as prefix
+ * f.a. var(--clr-brand)
+ */
 $colors: (
     brand: #19bcf3,
     bleach: #cfe7f2,
+    light: #e1f7ff,
     paper: #d8cca8,
     dblue: #227197,
     green: #14cd9f,
@@ -30,5 +34,5 @@ $colors: (
     compink: #966691,
     yellow: #f1e91d,
     truedark: #193849,
-    white: #e1f7ff,
+    white: #f9fbff
 );

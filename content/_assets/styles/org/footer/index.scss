@@ -1,0 +1,9 @@
+@use "../../mlc/nav" as nav;
+
+#main-footer{
+    background-color: var(--clr-white);
+
+    nav{
+        @extend %navigation;
+    }
+}

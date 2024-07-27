@@ -1,6 +1,9 @@
 @use "atm";
+@use "mlc";
+@use "org";
 
 .wrapper{
     margin: 0 auto;
+    width: 95%;
     max-width: var(--utl-wrapper);
 }

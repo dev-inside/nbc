@@ -1,6 +1,7 @@
 @use "root";
 @use "typo";
 @use "grid";
+@use "image";
 
 @include typo.init;
 @include grid.init;

@@ -1,4 +1,4 @@
-@use "../vars.scss" as vars;
+@use "../../vars.scss" as vars;
 
 
 @mixin makeGrid {
@@ -12,10 +12,22 @@
             grid-column-gap: 0;
             grid-row-gap: 0;
         }
+
+        &--vertical-align {
+            &-center {
+                align-items: center;
+            }
+        }
     }
 }
 
 @mixin makeCols($prefix: false) {
+    $align: (
+        left: start,
+        center: center,
+        right: end
+    );
+
     $col: "col-";
 
     @if $prefix {
@@ -27,17 +39,23 @@
             grid-column: span #{$c};
         }
     }
+
+    @each $name, $dir in $align {
+        .#{$col}#{$name} {
+            justify-self: #{$dir};
+        }
+    }
 }
 
 @mixin respGrid {
     @each $vp, $size in vars.$viewports {
-        @media (min-width: #{$size}px) {            
+        @media (min-width: #{$size}px) {
             @include makeCols($vp);
         }
     }
 }
 
-@mixin init{
+@mixin init {
     @include makeGrid;
     @include makeCols;
     @include respGrid;
