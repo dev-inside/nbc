@@ -2,6 +2,7 @@ $util: (
     base: 1rem,
     font: 1.7rem,
     wrapper: 1440px,
+    rd: .6rem,
 );
 
 $viewports: (
@@ -10,13 +11,16 @@ $viewports: (
     lg: 1024,
 );
 
+/**
+ * Calculates header by the given factor with the base-font-size
+ */
 $headlines: (
-    h1: 5.6rem,
-    h2: 3.2rem,
-    h3: 2.8rem,
-    h4: 2.4rem,
-    h5: 2rem,
-    h6: 1.8rem,
+    h1: 2.8,
+    h2: 2.5,
+    h3: 2,
+    h4: 1.5,
+    h5: 1.6,
+    h6: 1,
 );
 
 /**
@@ -32,6 +36,7 @@ $colors: (
     green: #14cd9f,
     med: #54a5a8,
     compink: #966691,
+    comblue: #b0e3f8,
     yellow: #f1e91d,
     truedark: #193849,
     white: #f9fbff

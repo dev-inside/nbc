@@ -14,11 +14,12 @@ module.exports = function (eleventyConfig) {
 	 * 
 	 * @returns {string} 			Renders a picture-element with the thmbs-srcset as webp and jpeg as fallback
 	 */
-	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs=[300, 600, 1000]) {
+	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs=[400, 600, 1000]) {
 		let metadata = await Image(src, {
 			widths: thmbs,
-			formats: ["webp", "jpeg"],
-			outputDir: "_public/img/"
+			formats: ["avif", "webp"],
+			outputDir: "_public/img/",
+			svgCompressionSize: "br",
 		});
 
 		let imageAttributes = {

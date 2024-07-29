@@ -2,11 +2,9 @@
 <a href="{{cta}}" title="{{title}}" class="btn {{btn}}">{{title}}</a>
 {% endmacro %}
 
-
-
 {% macro section(selector) %}
 {% for item in selector %}
-    <section class="{{ item.data.section}}">
+    <section class="{{ item.data.section}}" {% if item.data.style %}style="{{ item.data.style }}"{% endif %}>
         <div class="wrapper">
             {{ item.content | safe }}
         </div>

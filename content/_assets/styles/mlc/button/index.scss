@@ -1,0 +1,21 @@
+@use "../../vars" as vars;
+@use "../../utl" as utl;
+
+.btn{
+    --btn-bg: var(--clr-med);
+    --btn-font: var(--clr-white);
+    background-color: var(--btn-bg);
+    border-radius: var(--utl-rd);
+    color: var(--btn-font);
+    padding: utl.base(1) utl.base(1.6);
+    display: inline-block;
+    width: auto;
+
+    strong, b{
+        color: var(--btn-font);
+    }
+
+    &.space{
+        margin: utl.base() 0;
+    }
+}

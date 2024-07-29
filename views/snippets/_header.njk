@@ -1,15 +1,15 @@
 <header id="main-header">
     <div class="wrapper grid grid--vertical-align-center">
         <figure class="logo col-2">
-            <a href="/" title="{{ site.name }}">
+            <a href="/" title="{{ site.name }}" tabindex="1">
                 <img src="img/nabucasa_logo.svg" alt="{{ site.name }}">
             </a>
         </figure>
-        <nav id="main-navigation" class="col-8 col-md-8 col-md-center">
+        <nav id="main-navigation" class="col-8 col-md-8 col-md-center" tabindex="2">
             <ul>
                 {%- for post in collections.content %}
-                <li>
-                    <a href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+                <li role="presentation">
+                    <a role="menuitem" href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
                 </li>
                 {% endfor -%}
             </ul>

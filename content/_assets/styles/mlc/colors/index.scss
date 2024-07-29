@@ -1,0 +1,19 @@
+.gdr {
+    --gr-deg: 180deg;
+    --gr-color1: var(--clr-white);
+    --gr-color2: var(--clr-brand);
+    --gr-pos1: 0;
+    --gr-pos2: 100%;
+    --gr-font: var(--clr-dblue);
+    color: var(--gr-font);
+
+
+    &--linear {
+        background: linear-gradient(var(--gr-deg), var(--gr-color1) var(--gr-pos1), var(--gr-color2) var(--gr-pos2));
+
+    }
+
+    &--dark {
+        --gr-font: var(--clr-light);
+    }
+}

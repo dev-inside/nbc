@@ -1,6 +1,18 @@
+@use "../../utl/" as utl;
+
 .section{
+    --top-padding: 4.5vh;
+    padding: var(--top-padding) 0 utl.base();
+
     &-full{
         width: 100vw;
-        height: 100vh;
+        padding: var(--top-padding) 0 utl.base();
+        min-height: calc(100vh - var(--top-padding) - utl.base(.5));
+        box-sizing: border-box;
     }
+
+}
+
+.teaser{
+    font-size: calc(var(--utl-font) * 1.2);
 }

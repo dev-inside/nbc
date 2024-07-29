@@ -73,11 +73,12 @@
     %headline {
         line-height: 1;
     }
-
-    @for $i from 1 through 6 {
-        h#{$i} {
+    
+    @each $hi, $factor in vars.$headlines {
+        #{$hi} {
             @extend %headline;
-            font-size: var(--utl-h#{$i});
+            font-size: calc(var(--utl-font) * $factor);
+            margin-bottom: utl.base(2);
         }
     }
 }
