@@ -4,18 +4,39 @@
 .btn{
     --btn-bg: var(--clr-med);
     --btn-font: var(--clr-white);
+
+    appearance: none;
+    border: 2px solid var(--btn-bg);
     background-color: var(--btn-bg);
     border-radius: var(--utl-rd);
     color: var(--btn-font);
     padding: utl.base(1) utl.base(1.6);
-    display: inline-block;
+    display: inline-flex;
+    gap: utl.base(.4);
     width: auto;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+
+    &--ghost{
+        background-color: transparent;
+        color: var(--btn-bg);
+    }
+
+    &--brand{
+        --btn-bg: var(--clr-brand);
+    }
+
+    &--gap{
+        gap: utl.base(1);
+    }
+    
 
     strong, b{
         color: var(--btn-font);
     }
 
     &.space{
-        margin: utl.base() 0;
+        margin: utl.base(1) 0;
     }
 }

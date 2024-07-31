@@ -14,12 +14,11 @@ module.exports = function (eleventyConfig) {
 	 * 
 	 * @returns {string} 			Renders a picture-element with the thmbs-srcset as webp and jpeg as fallback
 	 */
-	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs=[400, 600, 1000]) {
+	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs = [400, 600, 1000], cls = false, style = false) {
 		let metadata = await Image(src, {
 			widths: thmbs,
 			formats: ["avif", "webp"],
 			outputDir: "_public/img/",
-			svgCompressionSize: "br",
 		});
 
 		let imageAttributes = {
@@ -28,6 +27,14 @@ module.exports = function (eleventyConfig) {
 			loading: "lazy",
 			decoding: "async",
 		};
+
+		if (cls) {
+			imageAttributes.class = cls;
+		}
+
+		if (style) {
+			imageAttributes.style = style;
+		}
 
 		return Image.generateHTML(metadata, imageAttributes);
 	});
@@ -42,8 +49,8 @@ module.exports = function (eleventyConfig) {
 	 *
 	 * @return  {string}            Simple HTML <img>-Tag
 	 */
-	eleventyConfig.addShortcode("img", function(src,title){
-		return `<img src="img/${src}" title="${title}" alt="${title}" />`
+	eleventyConfig.addShortcode("img", function (src, title, cls = false, style = false) {
+		return `<img src="img/${src}" title="${title}" alt="${title}" ${cls ? `class="${cls}"` : ''} ${style ? `style="${style}"` : ''}/>`
 	})
 
 	/**
@@ -56,7 +63,7 @@ module.exports = function (eleventyConfig) {
 	 *
 	 * @return  {string}            Simple link/button helper
 	 */
-	eleventyConfig.addShortcode("btn", function(href, title, btn="btn"){
+	eleventyConfig.addShortcode("btn", function (href, title, btn = "btn") {
 		return `<a href="${href}" alt="${title}" class="${btn}">${title}</a>`
 	})
 
@@ -77,8 +84,8 @@ module.exports = function (eleventyConfig) {
 
 	// Copy img-folder including content
 	eleventyConfig.addPassthroughCopy("img");
-
-	eleventyConfig.addPassthroughCopy({"./node_modules/@fontsource-variable/figtree/files/*.woff2": "_assets/fonts"});
+	// Copy "Figtree"-Font
+	eleventyConfig.addPassthroughCopy({ "./node_modules/@fontsource-variable/figtree/files/*.woff2": "_assets/fonts" });
 
 
 	// Set directories

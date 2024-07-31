@@ -1,6 +1,5 @@
 {
     "override:tags": "home",
     "tags": "home",
-    "permalink": false,
-    "templateEngineOverride": "njk,md"
+    "permalink": false
 }

@@ -1,18 +1,37 @@
 @use "../../utl/" as utl;
 
-.section{
-    --top-padding: 4.5vh;
-    padding: var(--top-padding) 0 utl.base();
+.section {
+    --top-padding: 6rem;
+    padding: var(--top-padding) 0 var(--top-padding);
 
-    &-full{
-        width: 100vw;
-        padding: var(--top-padding) 0 utl.base();
-        min-height: calc(100vh - var(--top-padding) - utl.base(.5));
-        box-sizing: border-box;
+    &--full {
+        --top-padding: 4rem;
+        padding: var(--top-padding) 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(90vh - var(--top-padding));
+
+        @media screen and (min-width: 768px) {
+            min-height: 100vh;
+        }
     }
 
+    &--cover {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover cover;
+        background-blend-mode: multiply;
+    }
 }
 
-.teaser{
+.teaser {
     font-size: calc(var(--utl-font) * 1.2);
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: var(--utl-wrapper);
 }

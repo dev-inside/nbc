@@ -1,18 +1,30 @@
 ---
-title: Fund development of Home Assistant and ESPHome
+title: Fund development of<br/> Home Assistant and ESPHome
 imgs:
-    - title: Support the Development of Home Assistant
-      src: hassio_two_lines.svg
-    - title: You fund also ESP Home with your subscription
-      src: esp.svg
+- title: Support the Development of Home Assistant
+  src: hassio_two_lines.svg
+- title: You fund also ESP Home with your subscription
+  src: esp.svg
+section: section section--full text-center gdr gdr--linear section--bg-bottom
+style: "--gr-color1: var(--clr-comblue); --gr-color2: var(--clr-paper); --gr-pos1: -40%; --gr-img: img/bg_nc_staff.jpg"
 ---
 
-## {{ title }}
+<arcticle class="text-center teaser" style="--utl-wrapper: 80rem;">
+  <div class="wrapper">
+    <h3>{{ title | safe }}</h3>
+    
+    {% for img in imgs %}
+      {% img img.src, img.title, "addMargin byHeight" %}
+    {% endfor %}
 
-{% for img in imgs %}
-{% img img.src, img.title %}
-{% endfor %}
+    <p>
+      We started Home Assistant and have acquired ESPHome. Today these are the biggest open source projects that keep
+      your home private and your data local.
+    </p>
 
-We started Home Assistant and have acquired ESPHome. Today these are the biggest open source projects that keep your home private and your data local.
-
-Home Assistant Cloud gives us the income to work full-time on these projects. And we will keep making them better for you. Nabu Casa has no investors to satisfy, just its users.
+    <p>
+      Home Assistant Cloud gives us the income to work full-time on these projects. And we will keep making them better
+      for you. Nabu Casa has no investors to satisfy, just its users.
+    </p>
+  </div>
+</arcticle>

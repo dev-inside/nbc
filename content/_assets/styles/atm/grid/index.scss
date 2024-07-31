@@ -6,7 +6,7 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: utl.base(1.2);
+        grid-column-gap: utl.base(2);
         grid-row-gap: utl.base();
 
         &--no-gap {

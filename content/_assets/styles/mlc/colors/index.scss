@@ -1,3 +1,5 @@
+@use "../../utl" as utl;
+
 .gdr {
     --gr-deg: 180deg;
     --gr-color1: var(--clr-white);
@@ -7,13 +9,22 @@
     --gr-font: var(--clr-dblue);
     color: var(--gr-font);
 
-
+    
     &--linear {
         background: linear-gradient(var(--gr-deg), var(--gr-color1) var(--gr-pos1), var(--gr-color2) var(--gr-pos2));
+    }
 
+    &--radient{
+        background: radial-gradient(circle, var(--gr-color1) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    &--radient-main{
+        $color1: rgba(utl.grabColor(brand), $alpha: .22);
+        background: radial-gradient($color1 0%, rgba(255,255,255,0) 75%);
     }
 
     &--dark {
-        --gr-font: var(--clr-light);
+        --gr-font: var(--clr-white);
+        text-shadow: 0 3px 5px rgba(0,0,0, .1);
     }
 }

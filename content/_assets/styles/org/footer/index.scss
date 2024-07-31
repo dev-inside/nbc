@@ -1,9 +1,27 @@
 @use "../../mlc/nav" as nav;
+@use "../../utl" as utl;
 
 #main-footer{
     background-color: var(--clr-white);
+    padding: utl.base(3) 0;
+    margin-top: utl.base();
+
+    @media screen and (max-width: 768px) {
+        text-align: center; 
+     }
 
     nav{
         @extend %navigation;
+        li{
+            padding: 0 utl.base(.2);
+        }
+        
+    }
+
+    .social{
+        img{
+            width: auto;
+            max-width: 4rem;
+        }
     }
 }

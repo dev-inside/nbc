@@ -1,10 +1,51 @@
+@use "../../utl" as utl;
+
 figure,
 picture {
     --img-size: 100%;
-
+    
     img {
         max-width: var(--img-size);
         width: 100%;
         height: auto;
     }
+}
+
+.circular{
+    border-radius: 100%;
+}
+
+.square{
+    --img-size: 125px;
+    object-fit: cover;
+    width: var(--img-size);
+    height: var(--img-size);
+    max-height: var(--img-size);
+}
+
+.byHeight{
+    --img-size: 250px;
+    max-height: var(--img-size);
+}
+
+.addMargin{
+    margin: utl.base(2);
+    
+    &--vertical{
+        margin: utl.base(2) 0;
+    }
+
+    &--horizontal{
+        margin: 0 utl.base(2);
+    }
+}
+
+
+.addBottom{
+    margin-bottom: utl.base(2);
+}
+
+.inline-img{
+    max-width: 200px;
+    
 }

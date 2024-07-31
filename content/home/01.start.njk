@@ -1,6 +1,6 @@
 ---
 title: The Home Assistant Cloud
-section: section section-full gdr gdr--linear gdr--dark
+section: section section--full gdr gdr--linear gdr--dark
 style: "--gr-color1: var(--clr-compink); --gr-color2: var(--clr-comblue); --gr-pos1: -40%"
 ---
 
@@ -8,13 +8,15 @@ style: "--gr-color1: var(--clr-compink); --gr-color2: var(--clr-comblue); --gr-p
     <div class="wrapper">
         <h1>{{ title }}</h1>
 
-        {% thumbs "img/screenshot-assistant.png", title, "(min-width: 30em) 50vw, 100vw" %}
+        {% thumbs "img/screenshot-assistant.png", title, "(min-width: 30em) 50vw, 100vw", [300,600,1000], "addBottom", "--img-size: 80%" %}
 
-        The missing cloud piece for Home Assistant, by the founder of Home Assistant. Control your Home Assistant
-        from
-        anywhere.
-        Fully encrypted.
+        <p>
+            The missing cloud piece for Home Assistant, by the founder of Home Assistant. Control your Home Assistant
+            from
+            anywhere.
+            Fully encrypted.
+        </p>
 
-        {% btn "#", "START __FREE__ 31 DAY TRIAL", "btn space" %}
+        {% btn "#", "START <strong>FREE</strong> 31 DAY TRIAL", "btn space" %}
     </div>
 </arcticle>

@@ -3,7 +3,7 @@
         <section class="col-12 col-md-8 col-center col-md-left">
             {# rdfa snippets #}
             <div vocab="https://schema.org/" typeof="Organization">
-                © <span property="name">{{ footer.org.name }}</span> -
+                © <span property="name" class="strong">{{ footer.org.name }}</span> -
                 <span property="address">
                     <span property="streetAddress">{{ footer.org.street }}</span>,
                     <span property="addressLocality">{{ footer.org.city }}</span>,
@@ -12,7 +12,7 @@
             </div>
 
             {# Legal links #}
-            <nav>
+            <nav class="nav--separator">
                 <ul>
                     {%- for legal in collections.legal %}
                     <li>
@@ -23,7 +23,7 @@
             </nav>
         </section>
         {# External/Social Links #}
-        <nav class="col-12 col-md-4 col-center col-md-right">
+        <nav class="col-12 col-md-4 col-center col-md-right social">
             <ul>
                 {%- for ext in footer.external %}
                 <li>

@@ -1,3 +1,5 @@
+@use "../../utl" as utl;
+
 %navigation {
     ul {
         list-style: none;
@@ -5,6 +7,27 @@
 
         li {
             display: inline-block;
+        }
+    }
+}
+
+.nav {
+    &--separator {
+        --nav-separator: "/";
+
+        li {
+            &:after {
+                font-size: 90%;
+                content: var(--nav-separator);
+                display: inline-block;
+                margin: 0 0 0 utl.base(.4);
+            }
+
+            &:last-of-type{
+                &::after{
+                    content: initial;
+                }
+            }
         }
     }
 }

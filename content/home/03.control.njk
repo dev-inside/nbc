@@ -1,18 +1,24 @@
 ---
 title:  Your assistant under your control!
+section: section gdr gdr--radient-main
 keypoints:
-    - img: "img/help_hassio_assist.svg"
+    - img: "img/hassio_assist.png"
       content: With Home Assistant Cloud, you can control your Home with your voice using Assist, our own voice assistant.
-    - img: "img/watch.png"
+      class: byHeight addMargin
+    - img: "img/wearable.png"
       content: Assist works on a series of devices such as Android, Wear OS, iPhone, Apple Watch, and others.
-    - img: "img/alexa_and_google_assistant.svg"
+      class: square circular addMargin
+    - img: "img/google_assista_alexa.png"
       content: You can still connect to both Google Assistant and Amazon Alexa to use the Amazon Echo or Google Home.
+      class: byHeight addMargin
 ---
 
-## {{ title }}
+<h2 class="text-center">{{ title }}</h2>
+<div class="grid text-center">
 {% for kp in keypoints %}
-  <article>
-    {% thumbs kp.img, title, 300, [150] %}
+  <article class="col-12 col-md-4 col-center">
+    {% thumbs kp.img, title, 300, [400], kp.class %}
     <p>{{ kp.content }}</p>    
   </article>
 {% endfor %}
+</div>

@@ -1,12 +1,21 @@
 ---
 title: Secure access from anywhere
+section: section section--cover gdr gdr--dark
+style: "background: url(img/bg_security.jpg)"
 ---
 
-<figure>
-    {% thumbs "img/shield.png", title, "(min-width: 30em) 50vw, 100vw" %}
-</figure>
+<div class="grid grid--vertical-align-center teaser text-center">
+    <div class="col-12 col-md-6 col-center">
+        {% thumbs "img/shield.png", title, "(min-width: 30em) 50vw, 100vw", [400,600], false, "--img-size: 60%" %}
+    </div>
 
-## {{ title }}
-With Home Assistant Cloud, we will worry about the hard parts.
-Just log in via Home Assistant and a secure connection with the cloud will be established. You don't have to deal with dynamic DNS, SSL certificates or opening ports on your router.
-
+    <article class="col-12 col-md-6 col-center">
+        <h3>{{ title }}</h3>
+        <p>
+            With Home Assistant Cloud, we will worry about the hard parts.
+            Just log in via Home Assistant and a secure connection with the cloud will be established. You don't have to
+            deal with dynamic DNS, SSL certificates or opening ports on your router.
+        </p>
+        {% btn "#", "<span class='small'>▶</span> Play Sample", "btn btn--brand btn--gap space" %}
+    </article>
+</div>

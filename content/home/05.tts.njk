@@ -1,10 +1,20 @@
 ---
 title: Text-to-speech
+section: section text-center gdr gdr--radient-main teaser
 ---
 
-## {{ title }}
-Get access to neural-network powered text-to-speech as part of your subscription. Turn any text into natural sounding audio clips to be played on any speaker that Home Assistant supports.
-
-<figure>
-    {% img "text-to-speech.svg", title %}
-</figure>
+<article class="wrapper" style="--utl-wrapper: 60rem">
+    <h3>{{ title }}</h3>
+    {% img "text-to-speech.svg", title, "addMargin" %}
+    <p>
+        Get access to neural-network powered text-to-speech as part of your subscription. Turn any text into natural
+        sounding audio clips to be played on any speaker that Home Assistant supports.
+    </p>
+    {% btn "#", "<span class='small'>▶</span> Play Sample", "btn btn--brand btn--gap space" %}
+    {% btn "#", "Learn more", "btn btn--brand btn--ghost space" %}
+</article>
+<footer class="text-center">
+    <figure>
+        {% img "bg_waves.svg", title, "addMargin--vertical" %}
+    </figure>
+</footer>
