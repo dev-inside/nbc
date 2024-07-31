@@ -27,3 +27,13 @@
         @return var(--utl-base);
     }
 }
+
+/**
+ * Helper for viewports
+ */
+@mixin mq($vp){
+    $vp: map.get(vars.$viewports, $vp);
+    @media screen and (min-width: $vp) {
+        @content;
+    }
+}

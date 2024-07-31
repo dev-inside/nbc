@@ -5,9 +5,10 @@
     background-color: var(--clr-white);
     padding: utl.base(3) 0;
     margin-top: utl.base();
+    text-align: center;
 
-    @media screen and (max-width: 768px) {
-        text-align: center; 
+     @include utl.mq(md){
+        text-align: initial;
      }
 
     nav{

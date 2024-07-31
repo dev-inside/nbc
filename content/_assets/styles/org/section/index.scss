@@ -4,24 +4,37 @@
     --top-padding: 6rem;
     padding: var(--top-padding) 0 var(--top-padding);
 
-    &--full {
+    &%fullsection{
         --top-padding: 4rem;
         padding: var(--top-padding) 0;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &--full {
+        @extend %fullsection;
         min-height: calc(90vh - var(--top-padding));
 
-        @media screen and (min-width: 768px) {
+        @include utl.mq(md){
             min-height: 100vh;
         }
     }
 
-    &--cover {
+    &--half {
+        @extend %fullsection;
+        min-height: calc(45vh - var(--top-padding));
+
+        @include utl.mq(md){
+            min-height: 50vh;
+        }
+    }
+
+    &--bg-fixed {
+        background-attachment: fixed;
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover cover;
+        background-size: cover;
         background-blend-mode: multiply;
     }
 }

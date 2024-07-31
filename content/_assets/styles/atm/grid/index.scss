@@ -50,7 +50,7 @@
 
 @mixin respGrid {
     @each $vp, $size in vars.$viewports {
-        @media (min-width: #{$size}px) {
+        @media screen and (min-width: #{$size}px) {
             @include makeCols($vp);
         }
     }

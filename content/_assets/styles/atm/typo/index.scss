@@ -61,6 +61,7 @@
     a {
         color: var(--clr-brand);
         text-decoration: none;
+        transition: ease-in all .2s;
     }
 
     ::selection {
