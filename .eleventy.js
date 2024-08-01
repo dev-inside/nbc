@@ -23,6 +23,7 @@ module.exports = function (eleventyConfig) {
 
 		let imageAttributes = {
 			alt,
+			title: alt,
 			sizes,
 			loading: loading,
 		};
