@@ -5,9 +5,7 @@
 {% macro section(selector) %}
 {% for item in selector %}
     <section class="{{ item.data.section}}" {% if item.data.style %}style="{{ item.data.style }}"{% endif %}>
-        <div class="wrapper">
-            {{ item.content | safe }}
-        </div>
+        {{ item.content | safe }}
     </section>
 {% endfor %}
 {% endmacro %}

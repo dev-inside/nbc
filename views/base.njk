@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | {{ site.name }}</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="https://www.nabucasa.com/img/default-social.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nabucasa" />
+    <meta name="twitter:title" content="Nabu Casa" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="https://www.nabucasa.com/img/default-social.png" />
+    <link rel="canonical" href="{{ site.url }}" />
     <link rel="stylesheet" href="_assets/styles/style.css">
 </head>
 
@@ -16,5 +30,14 @@
     </main>
     {% include "snippets/_footer.njk" %}
 </body>
+<script>
+    function toggleMenu(){
+        var mainNav = document.getElementById("main-navigation");
+        var cta = document.getElementById("cta-buttons");
+
+        mainNav.classList.toggle("show");
+        cta.classList.toggle("show");
+    }
+</script>
 
 </html>

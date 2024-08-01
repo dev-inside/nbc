@@ -23,6 +23,11 @@
         background: radial-gradient($color1 0%, rgba(255,255,255,0) 75%);
     }
 
+    &--radient-main-green{
+        $color1: rgba(utl.grabColor(green), $alpha: .42);
+        background: radial-gradient($color1 0%, rgba(255,255,255,0) 75%);
+    }
+
     &--dark {
         --gr-font: var(--clr-white);
         text-shadow: 0 3px 5px rgba(0,0,0, .1);

@@ -2,36 +2,72 @@
 @use "../../utl/" as utl;
 @use "sass:color";
 
-#main-header{
-    position: sticky;
+#main-header {
+    position: fixed;
+    width: 100vw;
     top: 0;
     z-index: 100;
     padding: utl.base(.4);
     background-color: color.adjust(utl.grabColor(white), $alpha: -.1);
 
-    .logo{
+    .logo {
         padding: utl.base(.3) 0;
-        max-width: 10rem;
+        max-width: 12rem;
     }
 }
 
 #main-navigation {
-    @extend %navigation;
+    @extend %navigation;    
 
-    ul{
-        li{
+    ul {
+        li {
 
-            a{
+            a {
                 color: var(--clr-darkblue);
                 padding: var(--utl-base);
                 border-radius: .6rem;
                 padding: utl.base(.6) utl.base(1.2);
 
-                &:hover{
+                &:hover {
                     background-color: var(--clr-brand);
                     color: var(--clr-white);
                 }
             }
+
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px dotted var(--clr-bleach);
+
+                a {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
+
+#burger {
+
+
+    button {
+        appearance: none;
+        background: none;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+        img{
+            max-width: 3rem;
         }
     }
 }

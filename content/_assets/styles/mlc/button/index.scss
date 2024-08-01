@@ -20,6 +20,12 @@
     justify-content: space-between;
     text-transform: uppercase;
 
+    &--small{
+        text-transform: none;
+        font-size: calc(var(--utl-font) * .9);
+        padding: utl.base(.5) utl.base(1);
+    }
+
     &--ghost{
         background-color: transparent;
         color: var(--btn-bg);
@@ -33,6 +39,11 @@
         --btn-bg: var(--clr-white);
         --btn-font: var(--clr-truedark);
     }
+
+    &--dark{
+        --btn-bg: var(--clr-truedark);
+    }
+    
 
     &--gap{
         gap: utl.base(1);

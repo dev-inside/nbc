@@ -1,0 +1,17 @@
+@use "../../utl" as utl;
+
+.slider{
+
+    .caption{
+        margin: utl.base();
+    }
+
+    &--boxed{        
+        .slider--item{
+            --item-color: var(--clr-bleached);
+            background-color: var(--item-color);
+            padding: utl.base(1.8);
+            border-radius: utl.base(2.6);
+        }
+    }
+}

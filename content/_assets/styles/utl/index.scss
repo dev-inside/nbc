@@ -33,7 +33,7 @@
  */
 @mixin mq($vp){
     $vp: map.get(vars.$viewports, $vp);
-    @media screen and (min-width: $vp) {
+    @media screen and (min-width: #{$vp}px) {
         @content;
     }
 }

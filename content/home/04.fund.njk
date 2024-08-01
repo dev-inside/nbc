@@ -1,20 +1,21 @@
 ---
 title: Fund development of<br/> Home Assistant and ESPHome
+section: section section--full-alternate text-center gdr gdr--linear teaser
+style: "--gr-color1: var(--clr-comblue); --gr-color2: var(--clr-paper); --gr-pos1: -40%"
 imgs:
 - title: Support the Development of Home Assistant
   src: hassio_two_lines.svg
 - title: You fund also ESP Home with your subscription
   src: esp.svg
-section: section section--full text-center gdr gdr--linear section--bg-bottom
-style: "--gr-color1: var(--clr-comblue); --gr-color2: var(--clr-paper); --gr-pos1: -40%; --gr-img: img/bg_nc_staff.jpg"
 ---
 
-<arcticle class="text-center teaser" style="--utl-wrapper: 80rem;">
-  <div class="wrapper">
+
+  <div class="wrapper" style="--utl-wrapper: 80rem">
+
     <h3>{{ title | safe }}</h3>
     
     {% for img in imgs %}
-      {% img img.src, img.title, "addMargin byHeight" %}
+      {% img img.src, img.title, "addMargin byHeight", "--img-size: 14rem" %}
     {% endfor %}
 
     <p>
@@ -26,5 +27,10 @@ style: "--gr-color1: var(--clr-comblue); --gr-color2: var(--clr-paper); --gr-pos
       Home Assistant Cloud gives us the income to work full-time on these projects. And we will keep making them better
       for you. Nabu Casa has no investors to satisfy, just its users.
     </p>
-  </div>
-</arcticle>
+</div>
+
+<footer class="section--bg-multiply text-center">
+  <figure>
+    {% thumbs "img/bg_nc_staff.jpg", title, "(min-width: 30em) 50vw, 100vw", [480, 900,1920], "locked" %}
+  </figure>
+</footer>

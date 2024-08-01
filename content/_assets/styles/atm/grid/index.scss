@@ -41,6 +41,14 @@
         }
     }
 
+    .#{$col}hidden{
+        display: none;
+    }
+
+    .#{$col}show{
+        display: block;
+    }
+
     @each $name, $dir in $align {
         .#{$col}#{$name} {
             justify-self: #{$dir};

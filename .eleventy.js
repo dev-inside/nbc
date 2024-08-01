@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
 	 * 
 	 * @returns {string} 			Renders a picture-element with the thmbs-srcset as webp and jpeg as fallback
 	 */
-	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs = [400, 600, 1000], cls = false, style = false) {
+	eleventyConfig.addShortcode("thumbs", async function (src, alt, sizes, thmbs = [400, 600, 1000], cls = false, style = false, loading = "lazy") {
 		let metadata = await Image(src, {
 			widths: thmbs,
 			formats: ["avif", "webp"],
@@ -24,8 +24,7 @@ module.exports = function (eleventyConfig) {
 		let imageAttributes = {
 			alt,
 			sizes,
-			loading: "lazy",
-			decoding: "async",
+			loading: loading,
 		};
 
 		if (cls) {
@@ -34,6 +33,10 @@ module.exports = function (eleventyConfig) {
 
 		if (style) {
 			imageAttributes.style = style;
+		}
+
+		if (loading){
+			imageAttributes.decoding = "async";
 		}
 
 		return Image.generateHTML(metadata, imageAttributes);

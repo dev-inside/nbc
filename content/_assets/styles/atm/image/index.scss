@@ -46,6 +46,11 @@ picture {
 }
 
 .inline-img{
-    max-width: 200px;
-    
+    max-width: 200px;   
+}
+
+.locked{
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
 }

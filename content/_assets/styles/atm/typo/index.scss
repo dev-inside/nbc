@@ -43,6 +43,7 @@
         color: var(--clr-dblue);
         font-size: var(--utl-font);
         font-weight: 300;
+        position: relative;
     }
 
     p {
@@ -76,7 +77,7 @@
     %headline {
         line-height: 1;
     }
-    
+
     @each $hi, $factor in vars.$headlines {
         #{$hi} {
             @extend %headline;
@@ -95,11 +96,32 @@
                 text-align: $dir;
             }
         }
+
+        &-small {
+            font-size: calc(var(--utl-font) * .9);
+        }
+
+        &-big {
+            font-size: calc(var(--utl-font) * 1.5);
+        }
+
+        &-strong {
+            font-weight: 700;
+        }
+
+        &-dark {
+            color: var(--clr-truedark);
+        }
     }
 
-    .small{
-        font-size: calc(var(--utl-font) * .9);
+    .hidden {
+        display: none;
     }
+
+    .show {
+        display: block;
+    }
+
 }
 
 

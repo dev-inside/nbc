@@ -1,18 +1,29 @@
 <header id="main-header">
     <div class="wrapper grid grid--vertical-align-center">
-        <figure class="logo col-2">
+        <figure class="logo col-9 col-md-2">
             <a href="/" title="{{ site.name }}" tabindex="1">
                 <img src="img/nabucasa_logo.svg" alt="{{ site.name }}">
             </a>
         </figure>
-        <nav id="main-navigation" class="col-8 col-md-8 col-md-center" tabindex="2">
-            <ul>
+
+        <div id="burger" class="col-3 col-right col-md-hidden">
+            <button onclick="toggleMenu()"><img src="img/burger.svg" alt="Menu"></button>
+        </div>
+
+        <nav id="main-navigation" class="col-12 col-md-8 col-md-center hidden col-md-show" tabindex="2">
+            <ul class="text-center">
                 {%- for post in collections.content %}
                 <li role="presentation">
-                    <a role="menuitem" href="{{ post.url }}" title="{{ post.data.title }}">{{ post.data.title }}</a>
+                    <a role="menuitem" href="#" title="{{ post.data.title }}">{{ post.data.title }}</a>
                 </li>
                 {% endfor -%}
             </ul>
         </nav>
+        <aside id="cta-buttons" class="col-12 col-md-2 col-md-right hidden col-md-show">
+            {% btn "#", "Start Trial", "btn btn--small space" %}
+            {% btn "#", "Login", "btn btn btn--small btn--ghost" %}
+        </aside>
+
+
     </div>
 </header>

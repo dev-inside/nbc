@@ -1,22 +1,36 @@
 ---
 title:  Home Assistant Hardware
+section: section gdr gdr--radient-main-green text-center teaser wrapper
 slider:
     - img: "img/hardware_HA_green.jpg"
       content: GREEN
+      bgColor: green
     - img: "img/hardware_HA_yellow.jpg"
       content: YELLOW
+      bgColor: yellow
     - img: "img/hardware_HA_skyconnect.jpg"
       content: SkyConnect
+      bgColor: brand
 ---
 
-## {{ title }}
-The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.
+<article class="wrapper text-dark" style="--utl-wrapper: 60rem">
+  <h3>{{ title }}</h3>
+  <p>
+    The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.
+  </p>
+</article>
 
-<div class="grid">
+<div class="slider slider--boxed grid text-dark">
 {% for hw in slider %}
-  <article class="col-12 col-md-4">
-    <h4>{{ hw.content }}</h4>
-    {% thumbs hw.img, title, 300, [150] %}
-  </article>
+  <div vocab="https://schema.org/" typeof="Product" class="slider--item col-12 col-md-4 addMargin--vertical" style="--item-color: var(--clr-{{hw.bgColor}});">
+    {% thumbs hw.img, title, 300, [300,600], "circular" %}
+    <div class="caption">
+      <span property="name">
+        Home Assistant
+        <div class="text-big text-strong">{{ hw.content }}</div>
+      </span>
+      {% btn "#", "Learn more", "btn btn--dark addMargin--vertical" %}
+    </div>
+  </div>
   {% endfor %}
 </div>
