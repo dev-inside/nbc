@@ -1,5 +1,7 @@
 # Nabu Casa Prototype
-I'd created the screendesign for this prototype back in March 2024 as part of my application as UX-Expert. For my current application as Webdeveloper at the Nabu Casa team, I needed something to show my skills, so I decided to code that page as a static prototype. You can see the prototype in action under https://nbc.devinside.de.
+I'd created the screendesign for this prototype back in March 2024 as part of my application as UX-Expert. The screendesign was created in penpot. It can be found here: [Nabu Casa Screendesign](https://design.penpot.app/#/view/93d0ad32-dfe5-8194-8003-d744bd048fa5?page-id=93d0ad32-dfe5-8194-8003-d744bd048fa6&section=interactions&index=0&share-id=93d0ad32-dfe5-8194-8003-fd8b83d81c93)
+
+For my current application as Webdeveloper at the Nabu Casa team, I needed something to show my skills, so I decided to code that page as a static prototype. You can see the prototype in action under https://nbc.devinside.de.
 
 The website contains at the moment only the startpage and was build with the following goals in mind:
 - Create a representative page
