@@ -58,7 +58,7 @@ Anything else is bun/node related.
 I ran some audits to prove the performance and search engine optimisations (SEO). You can find my results under the following links:
 - [Audit Chome Lighthouse Desktop](https://nbc.devinside.de/audits/lighthouse_audits_Desktop.pdf)
 - [Audit Chome Lighthouse Mobile](https://nbc.devinside.de/audits/lighthouse_audits_Mobile.pdf)
-- [SEORCH](https://nbc.devinside.de/audits/seorch.net-2024-08-01-02-31-83f)
+- [SEORCH](https://nbc.devinside.de/audits/seorch.net-2024-08-01-02-31-83.pdf)
 
 
 ### Tested Browsers
